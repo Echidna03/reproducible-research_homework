@@ -4,6 +4,14 @@
 
 https://github.com/Echidna03/logistic_growth/tree/main
 
+Q4.
+
+Observations from running random_walk.R: The start and finish locations of paths 1 and 2 are not set, but vary along with the route between them, in addition, the overall distance along each axis travelled varies significantly between the two paths, despite the fact that both walk paths take the same number of steps (500), for example on my initial run path1 moved between -2 and 2 (total distance 4) along the the x axis, whilst path2 moved between 8 and 0 (total distance 8). Furthermore, when the code is run a second time, two totally different walk paths are produced, these have no apparent relation to the previous two, with different start and end points.
+
+'Random' number generation in R is not truly random, but instead pseudorandom- random numbers are generated based on a seed value which is fed into an algorithm which approximates randomness. This seed value is not necessarily random in and of itself, and may be based on a value like the time or an inbuilt hardware random number generator. The results from each seed are deterministic- a seed will always produce the same set of 'random' values. As such, in order to make 'random' results reproducible, we can specify an initial seed value to be fed into the algorithm.
+
+
+
 ## Instructions
 
 The homework for this Computer skills practical is divided into 5 questions for a total of 100 points (plus an optional bonus question worth 10 extra points). First, fork this repo and make sure your fork is made **Public** for marking. Answers should be added to the # INSERT ANSWERS HERE # section above in the **README.md** file of your forked repository.
