@@ -10,6 +10,7 @@ Observations from running random_walk.R: The start and finish locations of paths
 
 'Random' number generation in R is not truly random, but instead pseudorandom- random numbers are generated based on a seed value which is fed into an algorithm which approximates randomness. This seed value is not necessarily random in and of itself, and may be based on a value like the time or an inbuilt hardware random number generator. The results from each seed are deterministic- a seed will always produce the same set of 'random' values. As such, in order to make 'random' results reproducible, we can specify an initial seed value to be fed into the algorithm.
 
+<img width="1085" alt="Screen Shot 2023-12-07 at 12 05 00 PM" src="https://github.com/Echidna03/reproducible-research_homework/assets/114155443/3026cafd-3328-413d-9b4c-07ceef287621">
 
 
 ## Instructions
