@@ -1,8 +1,6 @@
 # Reproducible research: version control and R
 
-\# INSERT ANSWERS HERE #
-
-https://github.com/Echidna03/logistic_growth/tree/main
+Q1-3. https://github.com/Echidna03/logistic_growth/tree/main
 
 Q4.
 
@@ -12,6 +10,7 @@ Observations from running random_walk.R: The start and finish locations of paths
 
 <img width="1085" alt="Screen Shot 2023-12-07 at 12 05 00 PM" src="https://github.com/Echidna03/reproducible-research_homework/assets/114155443/3026cafd-3328-413d-9b4c-07ceef287621">
 
+Q5.
 
 ## Instructions
 
