@@ -14,6 +14,10 @@ Q5.
 
 The Cui_etal2014 table has 13 columns and 33 rows
 
+A linear model can be fitted to the data by using a log transformation of both axes.
+
+The 
+
 
 ## Instructions
 
