@@ -16,8 +16,37 @@ The Cui_etal2014 table has 13 columns and 33 rows
 
 A linear model can be fitted to the data by using a log transformation of both axes.
 
-The 
+<img width="471" alt="Screen Shot 2023-12-07 at 1 24 55 PM" src="https://github.com/Echidna03/reproducible-research_homework/assets/114155443/dca70d6d-72c5-4705-838e-080f69e7538e">
 
+The values I found for $\alpha$ and $\beta$ are as follows:
+
+$\alpha$ = exp(7.0748) = 1181.807 (the exponent of the intercept)
+
+$\beta$ = 1.1515 (the gradient)
+
+The p values for $\alpha$ and $\beta$ were 9.196 2.28e-10 and 8.784 6.44e-10 respectively, both of these values are <0.5 and as such are statistically significant. The values for $\alpha$ and $\beta$ in the paper were 1182 and 1.52 respectively, these values are very similar to the ones I found in my analysis.
+
+This is the code required to reproduce the figure shown:
+
+install.packages("ggplot2")
+install.packages("janitor")
+
+library(ggplot2)
+library(janitor)
+
+Cui_etal_clean<- clean_names(Cui_etal2014)
+
+Cuilm <- lm(log(virion_volume_nm_nm_nm) ~ log(genome_length_kb), Cui_etal_clean)
+
+ggplot(aes(x = log(genome_length_kb), y =log(virion_volume_nm_nm_nm)), data =Cui_etal_clean) +
+  
+  geom_point() +
+  geom_smooth(method = lm) +
+  theme_bw() + 
+  xlab("Log[Genome Length(kb)]")+
+  ylab("Log[Virion volume (nm3)]")
+
+The estimated volume for a virus with ssDNA of 300kb is **$`V = 1.515*300000^{1181.807}`$**
 
 ## Instructions
 
