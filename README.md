@@ -20,11 +20,11 @@ A linear model can be fitted to the data by using a log transformation of both a
 
 The values I found for $\alpha$ and $\beta$ are as follows:
 
-$\alpha$ = exp(7.0748) = 1181.807 (the exponent of the intercept)
+$\alpha$ = 1.1515 (the gradient)
 
-$\beta$ = 1.1515 (the gradient)
+$\beta$ = exp(7.0748) = 1181.807 (the exponent of the intercept)
 
-The p values for $\alpha$ and $\beta$ were 9.196 2.28e-10 and 8.784 6.44e-10 respectively, both of these values are <0.5 and as such are statistically significant. The values for $\alpha$ and $\beta$ in the paper were 1182 and 1.52 respectively, these values are very similar to the ones I found in my analysis.
+The p values for $\alpha$ and $\beta$ were  8.784 6.44e-10 and 9.196 2.28e-10  respectively, both of these values are <0.5 and as such are statistically significant. The values for $\alpha$ and $\beta$ in the paper were 1.52 and 1182 and respectively, these values are very similar to the ones I found in my analysis.
 
 This is the code required to reproduce the figure shown:
 
@@ -46,7 +46,11 @@ ggplot(aes(x = log(genome_length_kb), y =log(virion_volume_nm_nm_nm)), data =Cui
   xlab("Log[Genome Length(kb)]")+
   ylab("Log[Virion volume (nm3)]")
 
-The estimated volume for a virus with ssDNA of 300kb is **$`V = 1.515*300000^{1181.807}`$**
+The estimated volume for a virus with ssDNA of 300kb is 
+
+**$`V =  1181.807*300000^{1.515}`$**
+
+**$`V = 2395806191 nm3`$**
 
 ## Instructions
 
